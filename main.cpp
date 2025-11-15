@@ -1,4 +1,3 @@
-//Con ran
 #include <iostream>
 #include <windows.h>
 #include <cstdlib>
