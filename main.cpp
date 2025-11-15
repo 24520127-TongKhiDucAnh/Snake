@@ -39,6 +39,7 @@ public:
 #define MAXY 20
 
 void VeKhung(){
+    cout<<"w: di len, a: qua trai, s: di xuong, d: qua phai, x: thoat\n";
     for (int i = MINX ; i<=MAXX ; i++)
         for (int j = MINY ; j<=MAXY ; j++)
             if ((i==MINX) || (i==MAXX) || (j==MINY) || (j==MAXY)){
@@ -55,10 +56,11 @@ int main()
     while (1){
         if (kbhit()){
             t = getch();
-            if (t=='a') Huong = 2;
-            if (t=='w') Huong = 3;
-            if (t=='d') Huong = 0;
-            if (t=='x') Huong = 1;
+            if (t == 'a' || t == 'A') Huong = 2;
+            if (t == 'w' || t == 'W') Huong = 3;
+            if (t == 'd' || t == 'D') Huong = 0;
+            if (t == 's' || t == 'S') Huong = 1;
+            if (t == 'x' || t == 'X') return 0;
         }
         system("cls");
         VeKhung();
